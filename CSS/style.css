@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #1c1c1c;
+}
 header {
   background: url(../images/background.jpg);
 }
@@ -17,21 +20,31 @@ header {
 nav {
   display: flex;
   justify-content: space-around;
+  padding: 15px;
 }
 nav div:first-child {
   font-size: 1.2em;
 }
 nav div:first-child span {
-  color: orange;
+  color: #ea9f06;
 }
-nav div a {
+nav a {
   text-decoration: none;
-  color: black;
+  color: #212121;
+  font-size: 1.3em;
+  font-family: "Arimo", Arial;
   padding: 10px;
+  transition: 500ms;
+}
+nav a:hover {
+  color: #ea9f06;
+  transform: scale(0.5s);
 }
 /* Section pour l'image*/
 .conteneur {
-  background-color: #333;
+  background-color: #f3f3f3;
+  width: 75%;
+  margin: 0 auto;
 }
 .banniere {
   text-align: center;
@@ -45,22 +58,153 @@ nav div a {
 }
 /* SECTION DES PRODUITS */
 #produits {
-  background-color: #fff;
-  width: 75%;
+  background-color: #f3f3f3;
+  width: 100%;
   margin: 0 auto;
-  border: 2px solid blue;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /* justify-content: center; */
-  /* padding: 15px; */
-}
-.product img {
-  border: 2px solid rgb(77, 234, 25);
-  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
 }
 .product {
-  border: 2px solid red;
+  margin: 0 auto;
   width: 35%;
   margin: 15px;
+  padding: 10px;
+  position: relative;
+}
+.product .img_tit {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+}
+.product h3 {
+  font-size: 16px;
+  padding: 15px;
+  font-family: "Arimo", Arial;
+  /* pour enlever le texte en gras du titre */
+  font-weight: normal;
+  text-align: center;
+}
+.texte span {
+  padding: 10px;
+  font-size: 1.5em;
+}
+.texte p {
+  background-color: #292929;
+  color: #ea9f06;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 8px;
+  position: absolute;
+  border-radius: 10%;
+  top: 5%;
+  left: 20%;
+}
+.texte button {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: #212121eb;
+  color: #fff;
+  width: 44%;
+  padding: 7px;
+  margin: 15px;
+}
+.texte button:hover {
+  background-color: #ea9f06;
+}
+.texte p {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-left: 65%;
+}
+.texte .prix {
+  color: #ea9f06;
+  font-weight: bold;
+  font-family: arial;
+}
+.texte .acienne_prix {
+  color: #373737;
+  font-weight: bold;
+  text-decoration: line-through;
+  font-family: arial;
+}
+/* FOOTER */
+footer {
+  background-color: #373737;
+}
+.footer_lien {
+  width: 40%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* pour mettre de l'espace entre les a */
+  padding: 15px;
+  background-color: #fff;
+}
+.footer_lien a {
+  position: relative;
+  text-decoration: none;
+  color: #555;
+  padding: 0 10px;
+  font-size: 18px;
+}
+/* POUR LE PETIT CERCLE DEVANT LES A ( bullet  point )*/
+.footer_lien a::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
+.footer_lien a:first-child::before {
+  content: none; /* pour enlever le cercle devant le premier élément */
+}
+
+/* icone social */
+.footer_icone_texte {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  /* background-color: #4444; */
+  margin: 0 auto;
+  color: #fff;
+  width: 80%;
+}
+.icones {
+  text-align: center;
+  max-width: 250px;
+  padding: 15px;
+}
+.icones p {
+  font-family: "Arimo", Arial;
+}
+hr {
+  border: none;
+  border-top: 2px solid #d1d1d1;
+  margin-bottom: 20px 0;
+  margin: 0 auto;
+  width: 80%;
+}
+.icone_social {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 20px;
+}
+.icone_social:hover {
+  opacity: 0.5;
+}
+footer .copy {
+  color: #fff;
+  font-family: "Arimo", Arial;
+  text-align: center;
+  padding: 15px;
 }
