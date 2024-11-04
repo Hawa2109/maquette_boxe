@@ -144,6 +144,10 @@ footer {
   gap: 20px; /* pour mettre de l'espace entre les a */
   padding: 15px;
   background-color: #fff;
+  position: absolute;
+  top: 225%;
+  left: 30%;
+
 }
 .footer_lien a {
   position: relative;
