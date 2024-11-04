@@ -140,13 +140,14 @@ footer {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 20px; /* pour mettre de l'espace entre les a */
   padding: 15px;
   background-color: #fff;
-  position: absolute;
-  top: 225%;
-  left: 30%;
+  /* position: absolute; */
+  position: relative;
+  top: 150%;
+  left: 2%;
 
 }
 .footer_lien a {
